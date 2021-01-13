@@ -1,0 +1,20 @@
+// BubbleSort:
+
+BenchmarkBubbleSort10Elements    	196.387.099 6.18 ns/op
+BenchmarkBubbleSort1000Elements   	 2.510.455  483 ns/op
+BenchmarkBubbleSort100000Elements  	         1  7.682.001.500 ns/op
+
+// Go native sorting library function:
+
+BenchmarkGoSort10Elements   	14.457.969    82.5 ns/op
+BenchmarkGoSort1000Elements    	   37.495    32.539 ns/op
+BenchmarkGoSort100000Elements  	     223    5.389.980 ns/op
+
+
+For sorting just a few elements, "BubbleSort" is the best choice. While leading with big amount of elements, native Go native sort function is much better
+
+// Sort function that, depending on the number of elements, uses BubbleSort or Go sort function:
+
+BenchmarkSort10Elements    	11.111.264	        91.0 ns/op
+BenchmarkSort1000Elements      37.612	     32.383 ns/op
+BenchmarkSort100000Elements 	 228	   5.315.974 ns/op
